@@ -1,2 +1,2 @@
 # ccwutw.github.io
-This is my personal website. It will be updated frequently.
+This is my personal website. I will update it frequently.
