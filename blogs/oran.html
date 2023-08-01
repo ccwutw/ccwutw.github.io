@@ -17,7 +17,7 @@ License URL: https://creativecommons.org/licenses/by/3.0/
 <link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="O-RAN, ML, AI, modeling" />
+<meta name="keywords" content="O-RAN, zero-shot, learning, ML, AI, modeling" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!--[if lt IE 9]>
      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -86,19 +86,25 @@ License URL: https://creativecommons.org/licenses/by/3.0/
 <div class="container">
 	<br>
 	<div class="main row">
-          <h2 class="style" id="blogs">Overview</h2>
-	<p align="justify" class="para_projects">
-		O-RAN designs an intelligent network controller (RAN Intelligent Controller, RIC) for supporting more efficient and real-time control of the Radio Access Network (RAN). To achieve this goal, O-RAN formulates a series of specifications for its computing architecture and provides optimal designs for different applications and different types of algorithms.
-  </p>
-	  <h2 class="style" id="blogs">Reference</h2>
-	<p class="para_projects">
-<li>1. O-RAN AI/ML workflow description and requirements 1.03 Retrieved from https://orandownloadsweb.azurewebsites.net/specifications</li>
+        <h2 class="style" id="blogs">Overview</h2>
+			<p align="justify" class="para_projects">
+				O-RAN designs an intelligent network controller (RAN Intelligent Controller, RIC) for supporting more efficient and real-time control of the Radio Access Network (RAN). To achieve this goal, O-RAN formulates a series of specifications for its computing architecture and provides optimal designs for different applications and different types of algorithms.
+  			</p>
+		
+		<h2 class="style" id="blogs">Zero-Shot Learning (ZSL)</h2>
+			<p align="justify" class="para_projects">
+				Training AI/ML without real datasets in O-RAN RIC is a complex task due to the scarcity of training data, stemming from privacy and regulatory constraints, commercial sensitivity, and the inherent complexity of RAN. 
+				Some concepts from Zero-Shot Learning (ZSL) have been developed to address this challenge: 1) Using O-RAN Simulator, an open-source platform that offers a realistic simulation environment for RAN, allowing a reinforcement learning agent to interact, make decisions, and learn optimal policies; 
+				2) Using O-RAN Digital Twin, which provides a high-fidelity virtual representation of the RAN, enabling the agent to learn policies tailored to the real network's characteristics; 
+				3) Using Generative Data, a unique approach that generates synthetic data mirroring real-world network data, preserving privacy and allowing the DRL agent to learn from diverse scenarios. 
+				To sum up, these methods offer innovative solutions to support ZSL in RAN without real datasets, effectively overcoming challenges related to privacy, commercial sensitivity, and complexity.
+			</p>
 
-<li>2. O-RAN Massive MIMO Use Cases Technical Report 1.0 Retrieved from hhttps://orandownloadsweb.azurewebsites.net/specifications</li>
-		
-  </p>
-    
-		
+	  	<h2 class="style" id="blogs">Reference</h2>
+			<p class="para_projects">
+				<li>1. O-RAN AI/ML workflow description and requirements 1.03 Retrieved from https://orandownloadsweb.azurewebsites.net/specifications</li>
+				<li>2. O-RAN Massive MIMO Use Cases Technical Report 1.0 Retrieved from hhttps://orandownloadsweb.azurewebsites.net/specifications</li>
+  			</p>
 		<div class="clearfix"></div>
 	</div>
 
