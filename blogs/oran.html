@@ -93,12 +93,17 @@ License URL: https://creativecommons.org/licenses/by/3.0/
 		
 		<h2 class="style" id="blogs">Zero-Shot Learning (ZSL)</h2>
 			<p align="justify" class="para_projects">
-				Training AI/ML without real datasets in O-RAN RIC is a complex task due to the scarcity of training data, stemming from privacy and regulatory constraints, commercial sensitivity, and the inherent complexity of RAN. 
-				Some concepts from Zero-Shot Learning (ZSL) have been developed to address this challenge: 1) Using O-RAN Simulator, an open-source platform that offers a realistic simulation environment for RAN, allowing a reinforcement learning agent to interact, make decisions, and learn optimal policies; 
-				2) Using O-RAN Digital Twin, which provides a high-fidelity virtual representation of the RAN, enabling the agent to learn policies tailored to the real network's characteristics; 
-				3) Using Generative Data, a unique approach that generates synthetic data mirroring real-world network data, preserving privacy and allowing the DRL agent to learn from diverse scenarios. 
-				To sum up, these methods offer innovative solutions to support ZSL in RAN without real datasets, effectively overcoming challenges related to privacy, commercial sensitivity, and complexity.
+				In the era of 5G and beyond, O-RAN RIC (Open Radio Access Network RAN Intelligent Controller) faces a daunting challenge: how to train Artificial Intelligence/Machine Learning (AI/ML) models without real datasets. The scarcity of such datasets arises from multifaceted issues including strict privacy guidelines, stringent regulatory constraints, commercial sensitivities, and the multifaceted intricacy of the Radio Access Network (RAN).
 
+				To navigate this complex landscape, the concept of Zero-Shot Learning (ZSL) emerges as a beacon of hope. ZSL is a machine learning paradigm where a model is trained on one set of classes but is then asked to recognize objects from unseen classes. In the context of O-RAN RIC, this translates to training on one set of network conditions (like URLLC - Ultra Reliable Low Latency Communications, eMBB - enhanced Mobile Broadband, and mMTC - massive Machine Type Communications) and then testing the model under entirely different, previously unseen network scenarios.
+
+				There are three methods that leverage ZSL to train AI/ML models in O-RAN RIC:
+
+    				1) O-RAN Simulator: An avant-garde open-source platform that furnishes a realistic RAN simulation environment. This simulator lets a reinforcement learning agent immerse, make decisions, and consequently acquire optimal policies, all while being under the aegis of a controlled environment.
+				2) O-RAN Digital Twin: This digital counterpart provides a precise virtual depiction of the RAN. It's not just a mirror reflection but a dynamic model that lets agents derive policies which align seamlessly with the real network's idiosyncrasies.
+				3) Generative Data: Treading a different path, this method crafts synthetic data that mirrors genuine network data. Not only does this preserve the sanctity of privacy, but it also allows the Deep Reinforcement Learning (DRL) agent to imbibe from a plethora of diverse scenarios.
+				
+				In conclusion, using ZSL with these avant-garde methods is revolutionizing the way we approach AI/ML training in O-RAN RIC. Despite the absence of real datasets, these approaches adeptly circumvent issues of privacy, commercial sensitivities, and the labyrinthine complexity intrinsic to RAN, paving the way for a more robust and resilient network future.
 				<img src="../images/picture.png" alt="framework" class="img-responsive center-block"/>
 			</p>
 
