@@ -1,0 +1,166 @@
+<!--
+Author: Chien-Cheng Wu
+Edited from: W3layouts (https://w3layouts.com)
+License: Creative Commons Attribution 3.0 Unported
+License URL: https://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!--
+    <script data-ad-client="ca-pub-XXXXXXXXXXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+-->
+    <title>Key Aspects of 6G NTN Development</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico?" />
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="6G, NTN, 3GPP, ITU-R, Globalstar, SpaceX, Starlink, Satellite" />
+    <script
+        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <link href='https://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- start plugins -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    <!----fonts----->
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fonts/css/academicons.min.css">
+    <!----fonts----->
+    <!-- start light_box -->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.css" media="screen" />
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../js/jquery.fancybox-1.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div.fancyDemo a").fancybox();
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="header_bg" id="home"><!-- start header -->
+        <div class="container">
+            <div class="row header text-center specials">
+                <div class="h_logo">
+                    <img src="../images/logo_2.png" alt="" class="responsive" />
+                </div>
+                <nav class="top-nav">
+                    <ul class="top-nav nav_list">
+                        <li class="page-scroll"><a href="https://ccwutw.github.io/research.html">research</a></li>
+                        <li class="page-scroll"><a href="https://ccwutw.github.io/index.html#about">about</a></li>
+                        <li class="logo page-scroll"><img src="../images/logo_2.png" alt="" class="responsive" /></li>
+                        <li class="page-scroll"><a href="https://github.com/ccwutw/" target="_blank">code</a></li>
+                        <li class="page-scroll"><a
+                                href="https://ccwutw.github.io/index.html#publications">publications</a></li>
+                    </ul>
+                    <a href="#" id="pull"><img src="../images/nav-icon.png" title="menu" /></a>
+                </nav>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- start main -->
+    <div class="container">
+        <br>
+        <div class="main row">
+            <h2 class="style" id="blogs">Overview</h2>
+            <p align="justify" class="para_projects">
+                3GPP has committed to developing 6G specifications, with studies expected to start from Release 20 in 2025, followed by normative work in Release 21 in 2027. The focus is on creating a unified Terrestrial Network (TN) and Non-Terrestrial Network (NTN) system, designed for both environments from the start.
+            </p>
+
+            <!-- 1 -->
+            <h2 class="style" id="blogs">Key aspects of 6G NTN development</h2>
+            <p align="justify" class="para_projects">
+                <!-- <img src="../images/picture.png" alt="framework" class="img-responsive center-block" />-->
+                The development of 6G NTN encompasses several critical technical dimensions. A fundamental aspect is the native inclusion of satellite components in baseline 6G standardization efforts, specifically prioritized in 3GPP Release 20 study items and Release 21 normative work. This approach facilitates ecosystem growth by enabling shared scientific knowledge, industrial capabilities, and global market interoperability.
+                Frequency range optimization represents another pillar, requiring rigorous analysis of interactions across 6G spectrum allocations from FR1 (<7 GHz) to sub-THz frequencies (>100 GHz). These studies aim to identify synergistic terrestrial-non-terrestrial frequency combinations while exploring high-band opportunities for enhanced capacity.
+                The evolution of radio technologies addresses unique NTN challenges through three key innovations: OFDM waveform improvements for reduced synchronization dependency, advanced coding schemes to minimize error rates in low-SNR satellite links, and adaptive framing structures supporting high link margins (up to 30 dB) for robust connectivity in dynamic propagation environments.
+                A 3D network architecture integrates multi-orbit satellite systems (NGSO and GSO) with terrestrial infrastructure through inter-node links (INL) and High-Altitude Platform Stations (HAPS). This topology enables seamless handovers between orbital layers while optimizing spatial diversity for coverage and redundancy.
+                Finally, integrated localization leverages hybrid TN-NTN capabilities to achieve sub-meter positioning accuracy (≤1 m) with 95% reliability in <5 seconds, overcoming limitations of standalone GNSS through network-assisted timing synchronization and multi-source signal fusion.
+            </p>
+
+             <!-- 2 -->
+            <h2 class="style" id="blogs">Private Networks (Starlink and Globalstar)</h2>
+            <p align="justify" class="para_projects">
+                Private networks are gaining traction, with companies like Starlink and Globalstar playing significant roles:
+                Globalstar has secured spectrum licensing authority for Band 53 (n53) in 11 countries, enabling global private wireless network operations through a unified band, following 3GPP’s approval of its 5G variant in March 2020. Building on this capability, the company collaborates with Qualcomm to deploy 5G private networks leveraging Qualcomm’s RAN platforms, combining spectrum assets with advanced infrastructure. Meanwhile, Starlink has rapidly expanded its constellation to over 7,000 satellites serving 4 million users as of September 2024, with plans to grow to 12,000 satellites and potentially 34,400 in later phases. However, regulatory hurdles persist—the FCC rejected SpaceX’s request to repurpose Globalstar and Dish spectrum for its Gen2 satellite-to-mobile service, mandating new rulemaking for shared frequency access. Despite these challenges, Starlink’s financial trajectory underscores the sector’s significance, with projected revenues of $7.7 billion (2024) and $11.8 billion (2025), marking its first profit in 2023 after recovering from a net loss in 2022 despite $1.4 billion in revenue that year.
+            </p>
+
+            <h2 class="style" id="blogs">Conclusion</h2>
+            <p align="justify" class="para_projects">
+                The integration of TNs and NTNs in 6G presents both opportunities and challenges. Key issues include network interoperability, high overhead, Doppler effects, and synchronization13. As the field progresses, researchers and industry leaders must balance performance gains with solution complexity and operational constraints to realize the full potential of integrated 6G TN-NTN systems.
+            </p>
+
+            <h2 class="style" id="blogs">Reference</h2>
+            <p class="para_projects">
+                <li>1. 3GPP TR 38.821 V16.2.0 (2023-04), "Solutions for NR to support non-terrestrial networks (NTN) (Release 16)"</li>
+                <li>2. 3GPP SA WG SP-180326, "Update to 5GSAT: Integration of Satellite Access in 5G"</li>
+                <li>3. 3GPP TR 23.737, "Study on Architecture Aspects for Using Satellite Access in 5G"</li>
+                <li>4. 3GPP TR 22.822, "Study on using satellite access in 5G"</li>
+            </p>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+    <!-- end main -->
+
+    <div class="footer1_bg"><!-- start footer1 -->
+        <div class="container">
+            <div class="row  footer">
+                <div class="copy text-center">
+                    <p class="link"><span>&#169; 2019-2025 <br>Creative Commons License | Chien-Cheng Wu<br>Edited from
+                            template by W3layouts</span></p>
+                    <a href="#home" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;">
+                        </span></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('a[href*=#]:not([href=#])').click(function () {
+                        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+                            var target = $(this.hash);
+                            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                            if (target.length) {
+                                $('html,body').animate({
+                                    scrollTop: target.offset().top
+                                }, 1000);
+                                return false;
+                            }
+                        }
+                    });
+                });
+            </script>
+            <!---- start-smoth-scrolling---->
+        </div>
+    </div>
+</body>
+
+</html>
