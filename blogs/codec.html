@@ -12,13 +12,13 @@ License URL: https://creativecommons.org/licenses/by/3.0/
     <!--
     <script data-ad-client="ca-pub-XXXXXXXXXXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 -->
-    <title>Key Aspects of 6G NTN Development</title>
+    <title>Neural Network-Based Methods for Improved Video Compression in VVC/H.266 and HEVC/H.265</title>
     <link rel="shortcut icon" type="image/png" href="favicon.ico?" />
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css' />
     <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="6G, NTN, 3GPP, ITU-R, Globalstar, SpaceX, Starlink, Satellite" />
+    <meta name="keywords" content="Video Compression, Codec, 3GPP, Neural Network, VVC/H.266, HEVC/H.265" />
     <script
         type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!--[if lt IE 9]>
@@ -92,70 +92,39 @@ License URL: https://creativecommons.org/licenses/by/3.0/
         <div class="main row">
             <h2 class="style" id="blogs">Overview</h2>
             <p align="justify" class="para_projects">
-                3GPP has committed to developing 6G specifications, with studies expected to start from Release 20 in
-                2025, followed by normative work in Release 21 in 2027. The focus is on creating a unified Terrestrial
-                Network (TN) and Non-Terrestrial Network (NTN) system, designed for both environments from the start.
+                Advancements in video compression are critical to meeting the growing demand for high-quality video streaming, particularly with the rise of 4K, 8K, and even 16K resolutions. Traditional codecs like HEVC (H.265) and VVC (H.266) have achieved significant improvements in compression efficiency through hand-crafted tools. However, the integration of neural networks into video coding has emerged as a transformative approach, offering new possibilities for higher compression efficiency and reduced computational complexity.
             </p>
 
             <!-- 1 -->
-            <h2 class="style" id="blogs">Key aspects of 6G NTN development</h2>
+            <h2 class="style" id="blogs">Challenges in Traditional Video Compression</h2>
             <p align="justify" class="para_projects">
                 <!-- <img src="../images/picture.png" alt="framework" class="img-responsive center-block" />-->
-                The development of 6G NTN encompasses several critical technical dimensions. A fundamental aspect is the
-                native inclusion of satellite components in baseline 6G standardization efforts, specifically
-                prioritized in 3GPP Release 20 study items and Release 21 normative work. This approach facilitates
-                ecosystem growth by enabling shared scientific knowledge, industrial capabilities, and global market
-                interoperability.
-                Frequency range optimization represents another pillar, requiring rigorous analysis of interactions
-                across 6G spectrum allocations from FR1 (less than 7 GHz) to sub-THz frequencies (larger than 100 GHz).
-                These studies aim to identify synergistic terrestrial-non-terrestrial frequency combinations while
-                exploring high-band opportunities for enhanced capacity.
-                The evolution of radio technologies addresses unique NTN challenges through three key innovations: OFDM
-                waveform improvements for reduced synchronization dependency, advanced coding schemes to minimize error
-                rates in low-SNR satellite links, and adaptive framing structures supporting high link margins (up to 30
-                dB) for robust connectivity in dynamic propagation environments.
-                A 3D network architecture integrates multi-orbit satellite systems (NGSO and GSO) with terrestrial
-                infrastructure through inter-node links (INL) and High-Altitude Platform Stations (HAPS). This topology
-                enables seamless handovers between orbital layers while optimizing spatial diversity for coverage and
-                redundancy.
-                Finally, integrated localization leverages hybrid TN-NTN capabilities to achieve sub-meter positioning
-                accuracy (≤1 m) with 95% reliability in less than 5 seconds, overcoming limitations of standalone GNSS
-                through network-assisted timing synchronization and multi-source signal fusion.
+                Traditional video codecs like HEVC and VVC rely on sophisticated frameworks, including quadtree-based partitioning and rate-distortion optimization (RDO), to achieve high compression efficiency. For example:HEVC/H.265 introduced quadtree-based coding units (CUs) with 35 intra-prediction modes.
+
+                VVC/H.266 expanded this with multi-type tree (MTT) partitioning schemes (binary and ternary trees) and 67 intra-prediction modes for finer granularity.
+                
+                While these methods achieve excellent compression rates, they come at the cost of high computational complexity, particularly in encoding processes like motion estimation and intra-mode decision-making. This has spurred research into neural network-based solutions to address these challenges.
             </p>
 
             <!-- 2 -->
-            <h2 class="style" id="blogs">Private Networks (Starlink and Globalstar)</h2>
+            <h2 class="style" id="blogs">Video Compression Frameworks</h2>
             <p align="justify" class="para_projects">
-                Private networks are gaining traction, with companies like Starlink and Globalstar playing significant
-                roles:
-                Globalstar has secured spectrum licensing authority for Band 53 (n53) in 11 countries, enabling global
-                private wireless network operations through a unified band, following 3GPP's approval of its 5G variant
-                in March 2020. Building on this capability, the company collaborates with Qualcomm to deploy 5G private
-                networks leveraging Qualcomm's RAN platforms, combining spectrum assets with advanced infrastructure.
-                Meanwhile, Starlink has rapidly expanded its constellation to over 7,000 satellites serving 4 million
-                users as of September 2024, with plans to grow to 12,000 satellites and potentially 34,400 in later
-                phases. However, regulatory hurdles persist—the FCC rejected SpaceX's request to repurpose Globalstar
-                and Dish spectrum for its Gen2 satellite-to-mobile service, mandating new rulemaking for shared
-                frequency access. Despite these challenges, Starlink's financial trajectory underscores the sector's
-                significance, with projected revenues of $7.7 billion (2024) and $11.8 billion (2025), marking its first
-                profit in 2023 after recovering from a net loss in 2022 despite $1.4 billion in revenue that year.
+                Versatile Learned Video Compression (VLVC): This framework uses 3D motion vector fields (voxel flows) for spatial-temporal motion compensation. It decouples inter-prediction modes from the codec framework design, enabling more flexible compression strategies.
+                DeepCoder: A convolutional neural network (CNN)-based framework that replaces traditional motion estimation with learned models, improving rate-distortion performance while reducing complexity.
+                These methods demonstrate state-of-the-art performance in terms of Peak Signal-to-Noise Ratio (PSNR) while maintaining lower bitrates.
             </p>
 
             <h2 class="style" id="blogs">Conclusion</h2>
             <p align="justify" class="para_projects">
-                The integration of TNs and NTNs in 6G presents both opportunities and challenges. Key issues include
-                network interoperability, high overhead, Doppler effects, and synchronization. As the field
-                progresses, researchers and industry leaders must balance performance gains with solution complexity and
-                operational constraints to realize the full potential of integrated 6G TN-NTN systems.
+                Neural network-based video compression represents a paradigm shift that complements traditional methods while addressing their limitations. As research progresses, these techniques are poised to redefine the landscape of video streaming and storage efficiency in an era dominated by ultra-high-definition content and immersive media experiences like VR/AR.
             </p>
 
             <h2 class="style" id="blogs">Reference</h2>
             <p class="para_projects">
-                <li>1. 3GPP TR 38.821 V16.2.0 (2023-04), "Solutions for NR to support non-terrestrial networks (NTN)
-                    (Release 16)"</li>
-                <li>2. 3GPP SA WG SP-180326, "Update to 5GSAT: Integration of Satellite Access in 5G"</li>
-                <li>3. 3GPP TR 23.737, "Study on Architecture Aspects for Using Satellite Access in 5G"</li>
-                <li>4. 3GPP TR 22.822, "Study on using satellite access in 5G"</li>
+                <li>1. Bross, B., Chen, J., Liu, S., Ohm, J.-R., & Sullivan, G. J. (2021). "Overview of the Versatile Video Coding (VVC) Standard and its Applications."</li>
+                <li>2. Liu, D., Li, H., Li, S., & Wu, F. (2020). "Deep Learning-Based Video Coding: A Review and A Case Study."</li>
+                <li>3. IETF NetVC Working Group. "Internet Video Codec (NetVC) Charter and Documents."</li>
+                <li>4. Media Coding Industry Forum (MC-IF). "VVC Patent Licensing and FRAND Declaration."</li>
             </p>
             <div class="clearfix"></div>
         </div>
