@@ -1,0 +1,696 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+
+    <!-- Meta tags for SEO and responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Computer Science courses taught by Dr. Chien-Cheng Wu - Comprehensive curriculum covering programming, algorithms, AI, and more.">
+    <meta name="keywords"
+        content="Computer Science, Programming, Algorithms, AI, Machine Learning, Chien-Cheng Wu">
+    <meta name="author" content="Chien-Cheng Wu">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --purple-accent: #8b5cf6;
+            --red-accent: #ef4444;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23334155" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Header */
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-top: 80px;
+            min-height: 100vh;
+        }
+
+        /* Hero section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        /* Course cards */
+        .courses-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 60px;
+            color: var(--text-light);
+        }
+
+        .course-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary-color);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+        }
+
+        .course-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .course-icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+        }
+
+        .course-card .course-title {
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .course-code {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-family: 'JetBrains Mono', monospace;
+            margin-top: 5px;
+        }
+
+        .course-description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .course-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .detail-item i {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+
+        .course-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .course-btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-accent {
+            background: transparent;
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .course-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Color variations for different courses */
+        .course-card.cs-fundamentals .course-icon {
+            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+            color: white;
+        }
+
+        .course-card.ai-ml .course-icon {
+            background: linear-gradient(135deg, var(--purple-accent), #a855f7);
+            color: white;
+        }
+
+        .course-card.data-science .course-icon {
+            background: linear-gradient(135deg, var(--secondary-color), #059669);
+            color: white;
+        }
+
+        .course-card.systems .course-icon {
+            background: linear-gradient(135deg, var(--red-accent), #dc2626);
+            color: white;
+        }
+
+        .course-card.web-dev .course-icon {
+            background: linear-gradient(135deg, var(--accent-color), #d97706);
+            color: white;
+        }
+
+        .course-card.advanced .course-icon {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+        }
+
+        /* Statistics section */
+        .stats-section {
+            padding: 60px 0;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .course-card {
+                margin-bottom: 20px;
+                padding: 30px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .course-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .course-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .course-details {
+                justify-content: center;
+            }
+
+            .course-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg header">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-graduation-cap"></i> Courses
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lab.html">Lab</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/ccwutw/" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Computer Science Courses</h1>
+                <p class="subtitle">Dr. Chien-Cheng Wu</p>
+                <p class="description">
+                    Comprehensive computer science education covering fundamental programming concepts to advanced
+                    topics in artificial intelligence,
+                    machine learning, and systems design. Each course is designed to provide both theoretical knowledge
+                    and practical skills
+                    essential for modern software development and research.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses-section">
+            <div class="container">
+                <h2 class="section-title">Current Courses</h2>
+                <div class="row">
+                    <!-- Course 1: Programming Fundamentals -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="course-card cs-fundamentals">
+                            <div class="course-header">
+                                <div class="course-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div>
+                                    <h3 class="course-title">Programming Fundamentals</h3>
+                                    <!-- <div class="course-code">CS 101 | Fall 2025</div> -->
+                                </div>
+                            </div>
+                            <p class="course-description">
+                                Introduction to programming concepts using C++. Covers variables, control structures,
+                                functions, data structures, and object-oriented programming principles.
+                            </p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <!-- <span>Mon/Wed 10:00-11:30</span> -->
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <!-- <span>Room 201</span> -->
+                                </div>
+                            </div>
+                            <div class="course-links">
+                                <a href="#" class="course-btn btn-primary">
+                                    <i class="fas fa-book"></i> Syllabus
+                                </a>
+                                <a href="#" class="course-btn btn-secondary">
+                                    <i class="fas fa-tasks"></i> Assignments
+                                </a>
+                                <a href="#" class="course-btn btn-accent">
+                                    <i class="fas fa-video"></i> Lectures
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 2: Data Structures & Algorithms -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="course-card systems">
+                            <div class="course-header">
+                                <div class="course-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div>
+                                    <h3 class="course-title">Data Structures & Algorithms</h3>
+                                    <!-- <div class="course-code">CS 201 |  Fall 2025</div>-->
+                                </div>
+                            </div>
+                            <p class="course-description">
+                                Advanced study of data structures (trees, graphs, hash tables) and algorithms
+                                (sorting, searching, dynamic programming) with complexity analysis.
+                            </p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Tue/Thu 14:00-15:30</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <!--<span>Room 305</span>-->
+                                </div>
+                            </div>
+                            <div class="course-links">
+                                <a href="#" class="course-btn btn-primary">
+                                    <i class="fas fa-book"></i> Syllabus
+                                </a>
+                                <a href="#" class="course-btn btn-secondary">
+                                    <i class="fas fa-code"></i> Lab Exercises
+                                </a>
+                                <a href="#" class="course-btn btn-accent">
+                                    <i class="fas fa-chart-line"></i> Visualizations
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 3: Machine Learning -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="course-card ai-ml">
+                            <div class="course-header">
+                                <div class="course-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div>
+                                    <h3 class="course-title">Machine Learning</h3>
+                                     <!-- <div class="course-code">CS 301 | Fall 2025</div> -->
+                                </div>
+                            </div>
+                            <p class="course-description">
+                                Comprehensive introduction to machine learning algorithms, neural networks,
+                                and deep learning with hands-on projects using Python and TensorFlow.
+                            </p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                     <!-- <span>Mon/Wed 15:30-17:00</span> -->
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>AI Lab 101</span>
+                                </div>
+                            </div>
+                            <div class="course-links">
+                                <a href="#" class="course-btn btn-primary">
+                                    <i class="fas fa-book"></i> Course Materials
+                                </a>
+                                <a href="#" class="course-btn btn-secondary">
+                                    <i class="fas fa-flask"></i> Experiments
+                                </a>
+                                <a href="#" class="course-btn btn-accent">
+                                    <i class="fab fa-python"></i> Notebooks
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 4: Advanced Topics -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="course-card advanced">
+                            <div class="course-header">
+                                <div class="course-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div>
+                                    <h3 class="course-title">Advanced AI & Research</h3>
+                                    <div class="course-code">| Fall 2025</div>
+                                </div>
+                            </div>
+                            <p class="course-description">
+                                Research-oriented course covering cutting-edge AI topics: computer vision,
+                                NLP, reinforcement learning, and thesis project development.
+                            </p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                     <!--<span>Wed 16:00-18:00</span>-->
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Research Lab</span>
+                                </div>
+                            </div>
+                            <div class="course-links">
+                                <a href="#" class="course-btn btn-primary">
+                                    <i class="fas fa-microscope"></i> Research
+                                </a>
+                                <a href="#" class="course-btn btn-secondary">
+                                    <i class="fas fa-file-alt"></i> Papers
+                                </a>
+                                <a href="#" class="course-btn btn-accent">
+                                    <i class="fas fa-users"></i> Seminars
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2019-2025 <br>Creative Commons License | Chien-Cheng Wu</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/ccwutw/" target="_blank" style="color: var(--text-muted); margin: 0 10px;">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="index.html#publications" style="color: var(--text-muted); margin: 0 10px;">
+                    <i class="fas
