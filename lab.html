@@ -3,118 +3,131 @@ Author: Chien-Cheng Wu
 Edited from: W3layouts (https://w3layouts.com)  
 License: Creative Commons Attribution 3.0 Unported  
 License URL: https://creativecommons.org/licenses/by/3.0/  
--->  
-  
-<!DOCTYPE HTML>  
-<html>  
-  
-<head>  
-	<title>Lab</title>  
-	<link rel="shortcut icon" type="image/png" href="favicon.ico?" />  
-	<!-- Bootstrap -->  
-	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />  
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />  
-	<meta name="viewport" content="width=device-width, initial-scale=1">  
-	<meta name="keywords" content="Lab, Research Lab, Coming Soon" />  
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>  
-	
-    <!--[if lt IE 9]>  
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Lab</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.ico?" />
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Lab, Research Lab, Coming Soon" />
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<!--[if lt IE 9]>  
      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>  
      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
-    <![endif]-->  
-	
-    <link href='https://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>  
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />  
-  
-	<!-- start plugins -->  
-	<script type="text/javascript" src="js/jquery.min.js"></script>  
-	<script>  
-		$(function () {  
-			var pull = $('#pull');  
-			menu = $('nav ul');  
-			menuHeight = menu.height();  
-			$(pull).on('click', function (e) {  
-				e.preventDefault();  
-				menu.slideToggle();  
-			});  
-			$(window).resize(function () {  
-				var w = $(window).width();  
-				if (w > 320 && menu.is(':hidden')) {  
-					menu.removeAttr('style');  
-				}  
-			});  
+    <![endif]-->
+
+	<link href='https://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+	<!-- start plugins -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script>
+		$(function () {
+			var pull = $('#pull');
+			menu = $('nav ul');
+			menuHeight = menu.height();
+			$(pull).on('click', function (e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+			$(window).resize(function () {
+				var w = $(window).width();
+				if (w > 320 && menu.is(':hidden')) {
+					menu.removeAttr('style');
+				}
+			});
 		});  
-	</script>  
-	<!----fonts----->  
-	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">  
-	<link rel="stylesheet" href="fonts/css/academicons.min.css">  
-	<!----fonts----->  
-</head>  
-  
-<body>  
-	<div class="header_bg" id="home"><!-- start header -->  
-		<div class="container">  
-			<div class="row header text-center specials">  
-				<div class="h_logo">  
-					<img src="images/logo_2.png" alt="" class="responsive" />  
-				</div>  
-				<nav class="top-nav">  
-					<ul class="top-nav nav_list">  
-						<li><a href="lab.html">lab</a></li>  
-						<li><a href="research.html">research</a></li>  
-						<li class="page-scroll"><a href="index.html#about">about</a></li>  
-						<li class="logo page-scroll"><img src="images/logo_2.png" alt="" class="responsive" /></li>  
-						<li class="page-scroll"><a href="https://github.com/ccwutw/" target="_blank">code</a></li>  
-						<li class="page-scroll"><a href="index.html#publications">publications</a></li>  
-					</ul>  
-					<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>  
-				</nav>  
-				<div class="clearfix"></div>  
-			</div>  
-		</div>  
-	</div>  
-	  
-	<div class="main_bg" id="lab"><!-- start main content -->  
-		<div class="container">  
-			<div class="row about">  
-				<div class="col-md-12 text-center">  
-					<h3 style="color: white; margin-top: 100px; margin-bottom: 50px;">Lab</h3>  
-					<h1 style="color: #2EB398; font-size: 72px; margin-bottom: 30px;">Coming Soon</h1>  
-					<p style="color: white; font-size: 18px; margin-bottom: 100px;">  
-						We're working on something exciting. Stay tuned for updates!  
-					</p>  
-				</div>  
-			</div>  
-		</div>  
-	</div>  
-	  
-	<div class="footer1_bg"><!-- start footer1 -->  
-		<div class="container">  
-			<div class="row footer">  
-				<div class="copy text-center">  
-					<p class="link"><span>&#169; 2019-2025 <br>Creative Commons License | Chien-Cheng Wu<br>Edited from template by W3layouts</span></p>  
-					<a href="#home" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>  
-				</div>  
-			</div>  
-			<script type="text/javascript">  
-				$(function () {  
-					$('a[href*=#]:not([href=#])').click(function () {  
-						if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {  
-							var target = $(this.hash);  
-							target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');  
-							if (target.length) {  
-								$('html,body').animate({  
-									scrollTop: target.offset().top  
-								}, 1000);  
-								return false;  
-							}  
-						}  
-					});  
+	</script>
+	<!----fonts----->
+	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+	<link rel="stylesheet" href="fonts/css/academicons.min.css">
+	<!----fonts----->
+</head>
+
+<body>
+	<div class="header_bg" id="home"><!-- start header -->
+		<div class="container">
+			<div class="row header text-center specials">
+				<div class="h_logo">
+					<img src="images/logo_2.png" alt="" class="responsive" />
+				</div>
+				<nav class="top-nav">
+					<ul class="top-nav nav_list">
+						<li><a href="lab.html">lab</a></li>
+						<li><a href="research.html">research</a></li>
+						<li class="page-scroll"><a href="index.html#about">about</a></li>
+						<li class="logo page-scroll"><img src="images/logo_2.png" alt="" class="responsive" /></li>
+						<li class="page-scroll"><a href="https://github.com/ccwutw/" target="_blank">code</a></li>
+						<li class="page-scroll"><a href="index.html#publications">publications</a></li>
+					</ul>
+					<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+				</nav>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main_bg" id="lab"><!-- start main content -->
+		<div class="container">
+			<div class="row about">
+				<div class="col-md-12 text-center">
+					<h3 style="color: white; margin-top: 100px; margin-bottom: 50px;">Computing and Communication
+						Systems Laboratory</h3>
+					<h1 style="color: #2EB398; font-size: 72px; margin-bottom: 30px;">Coming Soon</h1>
+					<!-- Lab environment photo -->
+					<div style="margin-bottom: 50px;">
+						<img src="images/lab.png" alt="Lab Environment" style="
+                 			width: 100%;
+                			max-width: 900px;
+                			border-radius: 12px;
+                 			box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+               			">
+					</div>
+					<p style="color: white; font-size: 18px; margin-bottom: 100px;">
+						We're working on something exciting. Stay tuned for updates!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer1_bg"><!-- start footer1 -->
+		<div class="container">
+			<div class="row footer">
+				<div class="copy text-center">
+					<p class="link"><span>&#169; 2019-2025 <br>Creative Commons License | Chien-Cheng Wu<br>Edited from
+							template by W3layouts</span></p>
+					<a href="#home" id="toTop" style="display: block;"><span id="toTopHover"
+							style="opacity: 1;"></span></a>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(function () {
+					$('a[href*=#]:not([href=#])').click(function () {
+						if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+							var target = $(this.hash);
+							target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+							if (target.length) {
+								$('html,body').animate({
+									scrollTop: target.offset().top
+								}, 1000);
+								return false;
+							}
+						}
+					});
 				});  
-			</script>  
-			<!---- start-smoth-scrolling---->  
-		</div>  
-	</div>  
-</body>  
-  
+			</script>
+			<!---- start-smoth-scrolling---->
+		</div>
+	</div>
+</body>
+
 </html>
